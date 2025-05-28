@@ -1,0 +1,59 @@
+:root {
+  --font-stack: 'Times New Roman', Times, serif;
+}
+
+.loginForm-container{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.overlay {
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 350px;
+}
+
+.head-form {
+  text-align: center;
+}
+
+.head-form h2 {
+  margin: 0;
+  font-size: 26px;
+  color: #333;
+}
+
+.field-set {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-error {
+  margin-top: 0.6rem;
+  color: #e63946;
+  font-size: 14px;
+}
+
+.other {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  object-fit: contain;
+}

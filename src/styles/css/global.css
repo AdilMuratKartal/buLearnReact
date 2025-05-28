@@ -1,0 +1,22 @@
+.fx{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ctr{
+    justify-content: center !important;
+}
+
+.sp-ad{
+    justify-content: space-around !important;
+}
+
+.sp-sb{
+    justify-content: space-between !important;
+}
+
+.sp-ev{
+    justify-content: space-evenly !important;
+}
+
