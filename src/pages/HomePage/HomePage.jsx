@@ -9,6 +9,8 @@ import CourseIcon from '../../components/CourseIconSvg/CourseIcon';
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import { useSelector,useDispatch } from 'react-redux';
+import CertificateImage from '../../assets/images/certificate_badges.png';
+import LearningPathImage from '../../assets/images/learning_path.png';
 
 
 function HomePage() {
@@ -190,7 +192,7 @@ function HomePage() {
             </div>
             <div className="card-imgcontainer">
               <img
-                src="./pictures-icons/pictures/lightmode/certificate-light.png"
+                src={CertificateImage}
                 alt="Sertifika ve Rozet"
               />
             </div>
@@ -237,7 +239,7 @@ function HomePage() {
             </div>
             <div className="card-imgcontainer">
               <img
-                src="../pictures-icons/pictures/lightmode/learninpath.png"
+                src={LearningPathImage}
                 alt="Learning Path"
               />
             </div>
