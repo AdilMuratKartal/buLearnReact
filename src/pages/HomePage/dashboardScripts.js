@@ -78,7 +78,11 @@ export function drawMultiDoughnutChart(canvasId, dataSets, colors, strokeColor) 
         start += slice;
       });
     });
-    progress < 1 && (progress += 0.0067, requestAnimationFrame(animate));
+        if (progress < 1) {
+  progress += 0.0067;
+  requestAnimationFrame(animate);
+}
+
   }
   animate();
 }
