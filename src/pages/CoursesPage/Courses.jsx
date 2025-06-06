@@ -34,7 +34,7 @@ function Courses() {
 
   //sayfadaki arkaplan renginin lightgray olmasının sebebi header.css loginpagete yükleniyor bunları engellemenin yolunu bul
   return (
-    <div className='courses-body-container' style={{paddingTop: 60 , paddingBottom: 60 }}>
+    <div className='courses-body-container' style={{paddingTop: 60 , paddingBottom: 60, backgroundColor: "#f4f4f4" }}>
       <CoursesContainer>
         
         <Stack spacing={8}>
@@ -48,7 +48,11 @@ function Courses() {
             <Grid container spacing={4} columns={{xs: 2 , sm: 8 , md: 12}}>
               {userCourseData && userCourseData.map((course, index) => (
                 <Grid item size={{ xs: 2, sm: 4, md: 4 }} key={index}>
-                  <CourseCardItem title={course.Course} percentage={Math.floor(course.Grade)} chartColors={courseColors[index]} />
+                  <CourseCardItem 
+                    title={course.Course} 
+                    percentage={Math.floor(course.Grade)} 
+                    chartColors={courseColors[index]} 
+                  />
                 </Grid>
               ))}
             </Grid>

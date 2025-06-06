@@ -114,11 +114,12 @@ margin-bottom: 5px;
 fill: var(--text-color);
 }
 
-#courses{
+#home--courses{
 background-color: var(--card-bg);
 width: 100%;
 height: 60%;
 padding: 0;
+margin: 0;
 }
 
 .courses.dashboard{
@@ -304,146 +305,6 @@ font-size: small;
 }
 
 }
-/*CALENDAR*/
-.calendar-container {
-    background: var(--card-bg);
-    max-width: 100%;
-}
-
-.calendar-container header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-header .calendar-navigation {
-    display: flex;
-}
-
-header .calendar-navigation span {
-    height: 38px;
-    width: 38px;
-    margin: 0 1px;
-    cursor: pointer;
-    text-align: center;
-    line-height: 38px;
-    border-radius: 50%;
-    user-select: none;
-    color: #aeabab;
-    font-size: 1.5rem;
-}
-
-.calendar-navigation span:last-child {
-    margin-right: -10px;
-}
-
-header .calendar-navigation span:hover {
-    background: #f2f2f2;
-}
-
-header .calendar-current-date {
-    font-weight: 500;
-    font-size: 1rem;
-}
-
-.calendar-current-date{
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
-.calendar-body ul {
-    list-style: none;
-    flex-wrap: wrap;
-    display: flex;
-    text-align: center;
-}
-
-.calendar-body .calendar-dates {
-    margin-bottom: 20px;
-}
-
-.calendar-body li {
-    width: calc(100% / 7);
-    font-size: 1rem;
-    color: var(--text-color);
-}
-
-.calendar-body .calendar-weekdays li {
-    cursor: default;
-    font-weight: 500;
-}
-
-.calendar-body .calendar-dates li {
-    margin-top: 10px;
-    position: relative;
-    z-index: 1;
-    cursor: pointer;
-}
-
-.calendar-weekdays,.calendar-dates{
-    padding-left: 0px;
-}
-
-.calendar-dates li.inactive {
-    color: #aaa;
-}
-
-.calendar-dates li.active {
-    color: #fff;
-}
-
-.calendar-dates li::before {
-    position: absolute;
-    content: "";
-    z-index: -1;
-    top: 50%;
-    left: 50%;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.calendar-dates li.active::before {
-    background: var(--primary-color);
-}
-
-.calendar-dates li:not(.active):hover::before {
-    background: #e4e1e1;
-}
-
-@media screen and (min-width: 601px) and (max-width: 1280px) {
-    .calendar-body li {
-        font-size: 0.87rem;
-    }
-
-    header .calendar-current-date {
-        font-size: 0.87rem;
-    }
-
-    .calendar-dates li::before {
-        width: 25px;
-        height: 25px;    
-    }
-
-}
-
-@media screen and (max-width: 601px){
-    .calendar-body li {
-        font-size: 0.65rem;
-    }
-
-    header .calendar-current-date {
-        font-size: 0.65rem;
-    }
-
-    .calendar-dates li::before {
-        width: 20px;
-        height: 20px;
-    }
-
-}
-/*CALENDAR*/
 
     /* Ana Container */
 .card-doughnut-container {

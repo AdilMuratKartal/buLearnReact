@@ -10,7 +10,7 @@ const CourseCardItem = ({ title, percentage, chartColors }) => {
             boxShadow: 3,    
             height:{
                 sm: 305,
-                md: 280,
+                md: 320,
             },
             paddingBottom:{
                 xs: 2,// varsayılan değer

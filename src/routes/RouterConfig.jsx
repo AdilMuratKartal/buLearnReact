@@ -15,7 +15,6 @@ function RouterConfig() {
   return (
     <Routes>
       <Route path='/login' element={<LoginPage></LoginPage>}></Route>
-      <Route path='/' element={<Home/>}></Route>
       <Route path='/courses' element={<Courses/>}></Route>
       <Route path='/grades' element={<Grades/>}></Route>
       <Route path='/calendar' element={<Calendar/>}></Route>

@@ -1,8 +1,7 @@
 import { Suspense, lazy, useEffect, useState} from 'react'
 import './App.css'
-import Header from './components/Header/Header'
 import RouterConfig from './routes/RouterConfig'
-import HeaderAndSideBar from './components/HeaderAndSideBar/HeaderAndSideBar'
+import MainLayout from './Layout/MainLayout'
 
 const LoginPage = lazy(() => import('./pages/LoginPage/LoginPage'))
 
@@ -11,8 +10,7 @@ function App() {
 
   return (
     <>
-      <Header />
-      <HeaderAndSideBar/>
+      <MainLayout />
       {showLogin && (
         <Suspense fallback={<div>Loading...</div>}>
           <LoginPage />

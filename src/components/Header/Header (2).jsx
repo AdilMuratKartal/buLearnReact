@@ -18,8 +18,7 @@ import SearchOffIcon from '@mui/icons-material/SearchOff';
 import LanguageIcon from '@mui/icons-material/Language';
 import { useMediaQuery } from '@mui/material';
 import { useSelector, useDispatch } from 'react-redux';
-import { toggleSidebar} from '../../redux/slices/uiSlice';
-import MenuIcon from '@mui/icons-material/Menu';
+import { toggleSidebar} from '../../redux/slices/uiSlice'; 
 
 export default function Header() {
   //DropdownListler language ve profilde var
@@ -55,8 +54,12 @@ export default function Header() {
       <header id="headerBar">
         <nav className="nav">
           <div className="container-fluid">
-            <IconButton sx={{ color: '#fff', padding:"5px" }} onClick={() => dispatch(toggleSidebar())}>
-              <MenuIcon sx={{color: navIconColor}}/>
+            <IconButton sx={{ color: '#fff' }} onClick={() => dispatch(toggleSidebar())}>
+              <div className="hamburger">
+                <span className="line" />
+                <span className="line" />
+                <span className="line" />
+              </div>
             </IconButton>
 
             <div className="nav__link hide">

@@ -78,73 +78,10 @@ export function drawMultiDoughnutChart(canvasId, dataSets, colors, strokeColor) 
         start += slice;
       });
     });
-        if (progress < 1) {
-  progress += 0.0067;
-  requestAnimationFrame(animate);
-}
-
+    progress < 1 && (progress += 0.0067, requestAnimationFrame(animate));
   }
   animate();
 }
-
-// CALENDAR-JS
-export function initializeCalendar(
-  currId,
-  datesId,
-  prevId,
-  nextId
-) {
-  let date = new Date();
-  let year = date.getFullYear();
-  let month = date.getMonth();
-  let haveNotification = false;
-  const currEl = document.getElementById(currId);
-  const datesEl = document.getElementById(datesId);
-  const prevBtn = document.getElementById(prevId);
-  const nextBtn = document.getElementById(nextId);
-  const months = [
-    'January','February','March','April','May','June',
-    'July','August','September','October','November','December'
-  ];
-
-  function manipulate() {
-    const dayOne = new Date(year, month, 1).getDay();
-    const lastDate = new Date(year, month + 1, 0).getDate();
-    const dayEnd = new Date(year, month, lastDate).getDay();
-    const prevLast = new Date(year, month, 0).getDate();
-    let lit = '';
-    for (let i = dayOne; i > 0; i--) lit += `<li class="inactive">${prevLast - i + 1}</li>`;
-    for (let i = 1; i <= lastDate; i++) {
-      const isToday =
-        i === date.getDate() &&
-        month === new Date().getMonth() &&
-        year === new Date().getFullYear()
-          ? 'active'
-          : '';
-      lit += haveNotification
-        ? `<li class="${isToday}">${i}<span class="badge badge-notification bg-danger">1</span></li>`
-        : `<li class="${isToday}">${i}</li>`;
-    }
-    for (let i = dayEnd; i < 6; i++) lit += `<li class="inactive">${i - dayEnd + 1}</li>`;
-    if (currEl) currEl.textContent = `${months[month]} ${year}`;
-    if (datesEl) datesEl.innerHTML = lit;
-  }
-
-  [prevBtn, nextBtn].forEach((btn) =>
-    btn?.addEventListener('click', () => {
-      month = btn.id === prevId ? month - 1 : month + 1;
-      if (month < 0 || month > 11) {
-        date = new Date(year, month, new Date().getDate());
-        year = date.getFullYear();
-        month = date.getMonth();
-      } else date = new Date();
-      manipulate();
-    })
-  );
-
-  manipulate();
-}
-
 
 
 export function drawMultiDoughnutChart2(canvasId, dataSets, colors, strokeColor,isDarkMode) {

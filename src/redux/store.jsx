@@ -11,6 +11,7 @@ import {
 } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'  // localStorage için
 import userReducer from './slices/userSlice'
+import uiReducer from './slices/uiSlice';
 
 // 1.1 Persist konfigürasyonu
 const persistConfig = {
@@ -27,6 +28,7 @@ const persistedUserReducer = persistReducer(persistConfig, userReducer)
 export const store = configureStore({
   reducer: {
     user: persistedUserReducer,
+    ui: uiReducer,
     // ... varsa diğer slice’lar
   },
   middleware: getDefaultMiddleware =>

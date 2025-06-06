@@ -3,14 +3,15 @@ import './HomePage.css'
 import {
   setupThemeSwitch,
   drawMultiDoughnutChart,
-  initializeCalendar,
+
 } from './dashboardScripts';
 import CourseIcon from '../../components/CourseIconSvg/CourseIcon';
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import { useSelector,useDispatch } from 'react-redux';
-import CertificateImage from '../../assets/images/certificate_badges.png';
-import LearningPathImage from '../../assets/images/learning_path.png';
+import Calendar from '../../components/Calendar/Calendar';
+import CertificatesBadgesPng from "../../assets/images/certificate_badges.png";
+import LearningPathPng from "../../assets/images/learning_path.png";
 
 
 function HomePage() {
@@ -20,12 +21,6 @@ function HomePage() {
   useEffect(() => {
     // Initialize all dashboard behaviors from external file
     setupThemeSwitch('doughnutChart');
-    initializeCalendar(
-      'calendar-current-date',
-      'calendar-dates',
-      'calendar-prev',
-      'calendar-next'
-    );
     // Initial draw of the doughnut chart (light mode)
   }, []);
 
@@ -83,7 +78,7 @@ function HomePage() {
             </div>
 
             {/* Courses List */}
-            <div className="courses dashboard" id="courses">
+            <div className="courses dashboard" id="home--courses">
 
               {
                 userCourseData && userCourseData.map((course,index) =>(
@@ -140,45 +135,7 @@ function HomePage() {
                 <KeyboardArrowRightIcon sx={{ fontSize: "30px", fontWeight: "bold"}} />
               </a>
             </div>
-            <div className="calendar-container">
-              <header className="calendar-header">
-                {/* these IDs must match what initializeCalendar is looking for */}
-                <p id="calendar-current-date" className="calendar-current-date"></p>
-                <div className="calendar-navigation">
-                  <KeyboardArrowLeftIcon
-                    id="calendar-prev"
-                    className="material-symbols-rounded" 
-                    sx={{ 
-                        fontSize: "30px", 
-                        fontWeight: "bold",
-                        '&:hover':{
-                          background: "#f2f2f2",
-                          borderRadius: 10
-                        }
-                    }} 
-                  />
-                  <KeyboardArrowRightIcon 
-                    id="calendar-next"
-                    className="material-symbols-rounded" 
-                    sx={{ 
-                        fontSize: "30px", 
-                        fontWeight: "bold",
-                        '&:hover':{
-                          background: "#f2f2f2",
-                          borderRadius: 10
-                        }
-                    }} 
-                  />
-                </div>
-              </header>
-              <div className="calendar-body">
-                <ul className="calendar-weekdays">
-                  {['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map(d => <li key={d}>{d}</li>)}
-                </ul>
-                {/* and this UL needs the matching ID too */}
-                <ul id="calendar-dates" className="calendar-dates"></ul>
-              </div>
-            </div>
+            <Calendar></Calendar>
           </div>
 
           {/* Card5 */}
@@ -192,7 +149,7 @@ function HomePage() {
             </div>
             <div className="card-imgcontainer">
               <img
-                src={CertificateImage}
+                src={CertificatesBadgesPng}
                 alt="Sertifika ve Rozet"
               />
             </div>
@@ -239,7 +196,7 @@ function HomePage() {
             </div>
             <div className="card-imgcontainer">
               <img
-                src={LearningPathImage}
+                src={LearningPathPng}
                 alt="Learning Path"
               />
             </div>

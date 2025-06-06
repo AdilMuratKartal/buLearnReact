@@ -1,21 +1,21 @@
 :root {
-        --body-color: #f4f4f4;
-        --dashboard-color: #ffffff;
-        --text-color: #222;
-        --card-bg: #ffffff;
-        --card-shadow: rgba(0, 0, 0, 0.1);
-        --primary-color: #007bff;
-        --secondary-color: #6c757d;
-        --border-color: #ddd;
-        --navbar-bg: rgba(51,45,45,1);
-        --hover-shadow: rgba(0, 0, 0, 0.658) 5px 25px 50px -12px;
-        --navbarlinkcolor: rgba(255, 255, 255, 0.55);
+  --body-color: #f4f4f4;
+  --dashboard-color: #ffffff;
+  --text-color: #222;
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --border-color: #ddd;
+  --navbar-bg: rgba(51,45,45,1);
+  --hover-shadow: rgba(0, 0, 0, 0.658) 5px 25px 50px -12px;
+  --navbarlinkcolor: rgba(255, 255, 255, 0.55);
 
-        /* Arama butonu ve giriş kutusu */
-        --search-toggle-color: rgba(255, 255, 255, 0.55);
-        --search-input-bg: rgba(255, 255, 255, 0.2);
-        --search-input-text: #222;
-      }
+  /* Arama butonu ve giriş kutusu */
+  --search-toggle-color: rgba(255, 255, 255, 0.55);
+  --search-input-bg: rgba(255, 255, 255, 0.2);
+  --search-input-text: #222;
+}
 
       .darkmode {
         --body-color: #0d0d0d;
@@ -111,7 +111,7 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        padding: 20px 0px;
+        padding: 5px 0px;
         background-color: var(--navbar-bg);
       }
       
@@ -208,7 +208,7 @@
         }
 
         .logo-img{
-          width: 80px;
+          width: 100px;
           height: 30px;
           object-fit: contain;
         }
